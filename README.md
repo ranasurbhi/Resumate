@@ -23,7 +23,7 @@ Clone this repository to your local machine:
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/resumate.git
+git clone https://github.com/ranasurbhi/Resumate.git
 Open the project folder and open index.html in your preferred web browser to run the application.
 
 How to Use
