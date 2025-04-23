@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Score Checker</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 50px;
+        }
+        h2 {
+            color: #343a40; /* Changed to dark gray for better readability */
+        }
+        .btn-primary {
+            background-color: #343a40; /* Changed to dark gray */
+            border-color: #343a40; /* Changed to dark gray */
+        }
+        .btn-primary:hover {
+            background-color: #23272b; /* Darker gray for hover effect */
+            border-color: #23272b; /* Darker gray for hover effect */
+        }
+        .results {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">ATS Score Checker</h2>
+        <form method="post" enctype="multipart/form-data" class="mt-4">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="job_description">Job Description</label>
+                <textarea class="form-control" id="job_description" name="job_description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="resume">Upload Resume (PDF)</label>
+                <input type="file" class="form-control-file" id="resume" name="resume" accept=".pdf" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Check ATS Score</button>
+        </form>
+
+        {% if generated_text %}
+            <div class="results">
+                <h3>Results:</h3>
+                <pre>{{ generated_text }}</pre>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
