@@ -1,7 +1,7 @@
-#ResuMate
+# ResuMate
 ResuMate is an easy-to-use online platform that helps users build and optimize their resumes. It allows users to input their details, generate a professional resume preview, and download it. Additionally, it provides an ATS (Applicant Tracking System) score based on the job profile they choose, helping users improve their chances of landing a job.
 
-###Features
+### Features
 **Resume Builder:** Users can input their personal and professional information to create a professional resume.
 
 **Live Preview:** Real-time preview of the resume as users input their details.
@@ -10,14 +10,14 @@ ResuMate is an easy-to-use online platform that helps users build and optimize t
 
 **Download Option:** Once the resume is ready, users can download it in a clean, professional format.
 
-###Technologies Used
+### Technologies Used
 Frontend: HTML, CSS, JavaScript
 
 AI Integration: GenAI (for ATS score calculation)
 
 Version Control: Git & GitHub
 
-###Installation
+### Installation
 Clone this repository to your local machine:
 
 bash
